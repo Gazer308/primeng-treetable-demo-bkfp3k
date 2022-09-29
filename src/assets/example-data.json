@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "data": {
+        "service": "TP/S1",
+        "repart": "hola",
+        "solution": null,
+        "product": null,
+        "select": null,
+        "version": null,
+        "import": null,
+        "cost": null
+      },
+      "children": [
+        {
+          "data": {
+            "service": null,
+            "repart": null,
+            "solution": "S1",
+            "product": null,
+            "select": null,
+            "version": null,
+            "import": null,
+            "cost": null
+          },
+          "children": [
+            {
+              "data": {
+                "service": null,
+                "repart": null,
+                "solution": null,
+                "product": "P1",
+                "select": true,
+                "version": "V1",
+                "import": 50,
+                "cost": 60
+              }
+            },
+            {
+              "data": {
+                "service": null,
+                "repart": null,
+                "solution": null,
+                "product": "P2",
+                "select": true,
+                "version": null,
+                "import": 25,
+                "cost": 15
+              }
+            },
+            {
+              "data": {
+                "service": null,
+                "repart": null,
+                "solution": null,
+                "product": "P3",
+                "select": false,
+                "version": null,
+                "import": 0,
+                "cost": 0
+              }
+            }
+          ]
+        },
+        {
+          "data": {
+            "service": null,
+            "repart": null,
+            "solution": "S2",
+            "product": null,
+            "select": null,
+            "version": null,
+            "import": null,
+            "cost": null
+          },
+          "children": [
+            {
+              "data": {
+                "service": null,
+                "repart": null,
+                "solution": null,
+                "product": "P1",
+                "select": true,
+                "version": "V1",
+                "import": 35,
+                "cost": 30
+              }
+            },
+            {
+              "data": {
+                "service": null,
+                "repart": null,
+                "solution": null,
+                "product": "P4",
+                "select": true,
+                "version": "V0",
+                "import": 65,
+                "cost": 70
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

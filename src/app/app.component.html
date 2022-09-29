@@ -1,0 +1,97 @@
+<h5>Basic</h5>
+<p-treeTable [value]="files1">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>service</th>
+      <th>repart</th>
+      <th>solution</th>
+      <th>product</th>
+      <th>select</th>
+      <th>version</th>
+      <th>import</th>
+      <th>cost</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+    <tr [ttRow]="rowNode">
+      <td>
+        <p-treeTableToggler
+          *ngIf="rowData.service"
+          [rowNode]="rowNode"
+        ></p-treeTableToggler>
+        {{ rowData.service }}
+      </td>
+      <td>
+        <p-dropdown
+          *ngIf="rowData.repart"
+          [options]="[]"
+          [(ngModel)]="rowData.repart"
+          optionLabel="hola"
+        ></p-dropdown>
+      </td>
+      <td>
+        <p-treeTableToggler
+          *ngIf="rowData.solution"
+          [rowNode]="rowNode"
+        ></p-treeTableToggler>
+        {{ rowData.solution }}
+      </td>
+      <td>{{ rowData.product }}</td>
+      <td>
+        <p-checkbox
+          *ngIf="rowData.product"
+          binary="true"
+          [(ngModel)]="rowData.select"
+          inputId="binary"
+        ></p-checkbox>
+      </td>
+      <td>
+        <p-dropdown
+          *ngIf="rowData.product"
+          [options]="[]"
+          [(ngModel)]="rowData.version"
+          optionLabel="hola"
+        ></p-dropdown>
+      </td>
+      <td>
+        <p-inputNumber
+          *ngIf="rowData.product"
+          [(ngModel)]="rowData.import"
+        ></p-inputNumber>
+      </td>
+      <td>
+        <p-inputNumber
+          *ngIf="rowData.product"
+          [(ngModel)]="rowData.cost"
+        ></p-inputNumber>
+      </td>
+    </tr>
+  </ng-template>
+</p-treeTable>
+
+<!-- <h5>Dynamic Columns</h5>
+<p-treeTable [value]="files2" [columns]="cols">
+  <ng-template pTemplate="header" let-columns>
+    <tr [ttRow]="rowNode">
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template
+    pTemplate="body"
+    let-rowNode
+    let-rowData="rowData"
+    let-columns="columns"
+  >
+    <tr>
+      <td *ngFor="let col of columns; let i = index">
+        <p-treeTableToggler
+          [rowNode]="rowNode"
+          *ngIf="i == 0"
+        ></p-treeTableToggler>
+        {{ rowData[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+</p-treeTable> -->
